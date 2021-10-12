@@ -1,0 +1,32 @@
+.main-hero {
+  width: 100%;
+
+  .slider {
+    width: 100%;
+
+    .owl-stage-outer {
+      width: 100%;
+
+      // .owl-stage {
+      //     width: 100%;
+
+      //     .owl-item {
+      //         width: 100%;
+
+      //         img {
+      //             width: 100%;
+      //             height: auto;
+      //         }
+      //     }
+      // }
+    }
+  }
+}
+
+// For smaller devices
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .main-hero {
+    padding-bottom: 40px;
+  }
+}

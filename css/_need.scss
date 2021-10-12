@@ -1,0 +1,118 @@
+.main-need {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .section-header {
+    max-width: 700px;
+    margin-top: 20px;
+    color: $gray-70;
+
+    .header-title {
+      font-size: 36px;
+      font-weight: 500;
+      text-align: center;
+      word-spacing: 2px;
+      letter-spacing: 1px;
+    }
+  }
+
+  .section-content {
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .content-items {
+      margin-right: 10px;
+      max-width: 50%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-column-gap: 10px;
+
+      .content-item {
+        padding: 16px 16px 0 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        .item-header {
+          // text-align: center;
+          margin-bottom: 12px;
+          color: $gray-70;
+        }
+
+        .item-detail {
+          font-size: 14px;
+          line-height: 1.6;
+          color: $gray-10;
+        }
+      }
+    }
+
+    // Beer slider
+
+    .beer-slider[data-beer-label]:after {
+      background-color: $primary-color;
+      color: $color-white;
+      text-transform: capitalize;
+    }
+
+    .beer-reveal[data-beer-label]:after {
+      background-color: $primary-color;
+      color: $color-white;
+      text-transform: capitalize;
+    }
+  }
+}
+
+// For smaller devices
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .main-need {
+    padding: 40px 12px;
+    margin-top: 80px;
+
+    .section-header {
+      margin-top: 0;
+
+      .header-title {
+        font-size: 26px;
+      }
+    }
+
+    .section-content {
+      margin-top: 40px;
+      flex-direction: column;
+
+      .content-items {
+        margin-right: 0;
+        margin-bottom: 32px;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 10px;
+
+        .content-item {
+          margin-bottom: 20px;
+          padding: 0 16px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+
+          .item-detail {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
